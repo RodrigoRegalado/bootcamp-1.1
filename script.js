@@ -1,7 +1,11 @@
+const npc1 = carsMoving()
+const npc2 = carsMoving()
+const npc3 = carsMoving()
+
 function carsMoving(x, y) {
     let direction = null;
 
-    function moveCar {
+    function moveCar() {
         if (direction === 'west') {
             x -= 1
         }
@@ -53,4 +57,7 @@ function sleep(time) {
     return new Promise(resolve => {
         setTimeout(resolve, time)
     })
+}
+
+async function pathOfCars() {
 }
