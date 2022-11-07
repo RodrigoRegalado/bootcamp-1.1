@@ -2,16 +2,36 @@
 function newCar(url) {
     let image = document.createElement('img')
     image.src = url
-    image.style.position = 'absolute'
+    image.style.position = 'relative'
     document.body.append(image)
     return image
 }
-
+// the seperate cars
 let npc1 = {
     npc1: newCar('assets/redcar.png'),
-    npc1: carsMoving(100,100)
+    npc1: carsMoving(200,100)
+}
+let npc2 = {
+    npc2: newCar('assets/bluecar.png'),
+    npc2: carsMoving(300,100)
+}
+let npc3 = {
+    npc3: newCar('assets/greencar.png'),
+    npc3: carsMoving(500,100)
+}
+// functions controlling the buttons
+document.getElementById("start-button").addEventListener("click",pathOfCars())
+document.getElementById("start-button").addEventListener("click", function handleCLick() { 
+    document.getElementById("start-button").remove()
+})
+const btn2 = document.getElementById("quick-time-event-button")
+btn2.addEventListener(click,"")
+
+function turnButtonRed() {
+    btn2.style.color="#eb4034"
 }
 
+// function for how the cars move
 function carsMoving(x, y) {
     let direction = null;
 
@@ -63,6 +83,7 @@ function carsMoving(x, y) {
         stop: stop
     }
 }
+
 function sleep(time) {
     return new Promise(resolve => {
         setTimeout(resolve, time)
