@@ -25,7 +25,6 @@ document.getElementById("start-button").addEventListener("click", function handl
     document.getElementById("start-button").remove()
 })
 const btn2 = document.getElementById("quick-time-event-button")
-btn2.addEventListener(click,"")
 
 function turnButtonRed() {
     btn2.style.color="#eb4034"
