@@ -1,6 +1,16 @@
-const npc1 = carsMoving()
-const npc2 = carsMoving()
-const npc3 = carsMoving()
+
+function newCar(url) {
+    let image = document.createElement('img')
+    image.src = url
+    image.style.position = 'absolute'
+    document.body.append(image)
+    return image
+}
+
+let npc1 = {
+    npc1: newCar('assets/redcar.png'),
+    npc1: carsMoving(100,100)
+}
 
 function carsMoving(x, y) {
     let direction = null;
@@ -18,10 +28,10 @@ function carsMoving(x, y) {
         if (direction === 'south') {
             y -= 1
         }
-        element.style.left = x + 'px'
-        element.style.bottom = y + 'px'
+
     }
     setInterval(moveCar, 1)
+
     async function driveEast(time) {
         direction ='east'
         await sleep(time)
@@ -60,4 +70,8 @@ function sleep(time) {
 }
 
 async function pathOfCars() {
+    await npc1.driveEast(1400)
+    await npc1.driveSouth(500)
+    stop()
 }
+pathOfCars()
