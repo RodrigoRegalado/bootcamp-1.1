@@ -24,11 +24,18 @@ document.getElementById("start-button").addEventListener("click",pathOfCars())
 document.getElementById("start-button").addEventListener("click", function handleCLick() { 
     document.getElementById("start-button").remove()
 })
+
 const btn2 = document.getElementById("quick-time-event-button")
 
-function turnButtonRed() {
+setTimeout(function turnButtonRed() {
     btn2.style.color="#eb4034"
+},3000)
+function turnButtonBlack() {
+    btn2.style.color="#000000"
 }
+document.getElementById("startbutton").addEventListener("click",turnButtonRed())
+btn2.addEventListener("click", turnButtonBlack())
+
 
 // function for how the cars move
 function carsMoving(x, y) {
