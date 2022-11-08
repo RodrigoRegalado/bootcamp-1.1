@@ -29,7 +29,7 @@ const btn2 = document.getElementById("quick-time-event-button")
 
 setTimeout(function turnButtonRed() {
     btn2.style.color="#eb4034"
-},3000)
+},6000)
 function turnButtonBlack() {
     btn2.style.color="#000000"
 }
